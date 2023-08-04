@@ -284,7 +284,7 @@
             <div>
                 <div class="container">
                     <div class="row">
-                        <div class="titles">
+                        <div class="titles">ap
                             <h2><span>Appliance</span>Services</h2>
                             <i class="fa fa-plane"></i>
                             <hr class="tall">
@@ -308,7 +308,8 @@
                             </div>
                         </a>
                     </div>
-                    <div>
+                    
+                    <div >
                         <a class="g-list" href="service-details/bedroom-deep-cleaning.html">
                             <div class="img-hover">
                                 <img src="{{asset('images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
@@ -324,6 +325,7 @@
                             </div>
                         </a>
                     </div>
+
                     <div>
                         <a class="g-list" href="service-details/dining-chair-shampooing.html">
                             <div class="img-hover">
@@ -404,6 +406,7 @@
                             </div>
                         </a>
                     </div>
+
                     <div>
                         <a class="g-list" href="service-details/mattress-shampooing.html">
                             <div class="img-hover">

@@ -124,36 +124,36 @@
                             @if(Auth::user()->utype==='ADM')
                             <li class="login-form"> <a href="#" title="Register">My Account (Admin)</a>
                                 <ul class="drop-down one-column hover-fade">
-                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
                             @elseif(Auth::user()->utype==='SVP')
                             <li class="login-form"> <a href="#" title="Register">My Account (S provider)</a>
                                 <ul class="drop-down one-column hover-fade">
-                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{route('sprovider.dashboard')}}">Dashboard</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
                             @else
                             <li class="login-form"> <a href="#" title="Register">My Account (Customer)</a>
                                 <ul class="drop-down one-column hover-fade">
-                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{route('customer.dashboard')}}">Dashboard</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
                             @endif
-                            <form id="logout-form" method="POST" action="{{route('logout')}}"></form>
+                            <form id="logout-form" method="POST" action="{{route('logout')}}" style="display: none">
                             @csrf
+                        </form>
                         @else
                         <li class="login-form"> <a href="{{route('register')}}" title="Register">Register</a></li>
                         <li class="login-form"> <a href="{{route('login')}}" title="Login">Login</a></li>
                         @endif
 
-                    @endif
-                    
+                    @endif    
                     <li class="search-bar">
-                    </li>
+                    </li>      
                 </ul>
             </nav>
         </header>
