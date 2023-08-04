@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SurfsideMedia - Online Service Provider for your House Needs</title>
+    <title>HomeServiceMedia - Online Service Provider for your House Needs</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -27,22 +27,21 @@
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="visible-md visible-lg text-left">
-                            <li><a href="tel:+911234567890"><i class="fa fa-phone"></i> +91-1234567890</a></li>
-                            <li><a href="mailto:contact@surfsidemedia.in"><i class="fa fa-envelope"></i>
-                                    contact@surfsidemedia.in</a></li>
+                            <li><a href="tel:+911234567890"><i class="fa fa-phone"></i> 01303895377</a></li>
+                            <li><a href="homeservice.xyz"><i class="fa fa-envelope"></i>
+                                    homeservice@media.com</a></li>
                         </ul>
                         <ul class="visible-xs visible-sm">
                             <li class="text-left"><a href="tel:+911234567890"><i class="fa fa-phone"></i>
-                                    +91-1234567890</a></li>
+                                    01303895377</a></li>
                             <li class="text-right"><a href="index.php/changelocation.html"><i
-                                        class="fa fa-map-marker"></i> Faridabad, Haryana</a></li>
+                                        class="fa fa-map-marker"></i> Dhaka, Bangladesh</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul class="visible-md visible-lg text-right">
                             <li><i class="fa fa-comment"></i> Live Chat</li>
-                            <li><a href="index.php/changelocation.html"><i class="fa fa-map-marker"></i> Faridabad,
-                                    Haryana</a></li>
+                            <li><a href="index.php/changelocation.html"><i class="fa fa-map-marker"></i> Dhaka, Bangladesh</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,7 +54,7 @@
 
                 <ul class="collapse">
                     <li class="title">
-                        <a href="index.php.html"><img src="{{asset('images/logo.png')}}"></a>
+                        <a href="index.php.html"><img style="max-width: 120px" src="{{asset('images/logo.png')}}"></a>
                     </li>
                     <li> <a href="javascript:void(0);">Air Conditioners</a>
                         <ul class="drop-down one-column hover-fade">
@@ -120,8 +119,39 @@
                             <li><a href="servicesbycategory/18.html">Home Automation</a></li>
                         </ul>
                     </li>
-                    <li class="login-form"> <a href="index.php/register.html" title="Register">Register</a></li>
-                    <li class="login-form"> <a href="login.html" title="Login">Login</a></li>
+                    @if(Route::has('login'))
+                        @auth
+                            @if(Auth::user()->utype==='ADM')
+                            <li class="login-form"> <a href="#" title="Register">My Account (Admin)</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                </ul>
+                            </li>
+                            @elseif(Auth::user()->utype==='SVP')
+                            <li class="login-form"> <a href="#" title="Register">My Account (S provider)</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                </ul>
+                            </li>
+                            @else
+                            <li class="login-form"> <a href="#" title="Register">My Account (Customer)</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                </ul>
+                            </li>
+                            @endif
+                            <form id="logout-form" method="POST" action="{{route('logout')}}"></form>
+                            @csrf
+                        @else
+                        <li class="login-form"> <a href="{{route('register')}}" title="Register">Register</a></li>
+                        <li class="login-form"> <a href="{{route('login')}}" title="Login">Login</a></li>
+                        @endif
+
+                    @endif
+                    
                     <li class="search-bar">
                     </li>
                 </ul>
@@ -174,14 +204,14 @@
                         <h3>CONTACT US</h3>
                         <ul class="contact_footer">
                             <li class="location">
-                                <i class="fa fa-map-marker"></i> <a href="#"> Faridabad, Haryana, India</a>
+                                <i class="fa fa-map-marker"></i> <a href="#"> Dhaka, Bangladesh</a>
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i> <a
-                                    href="mailto:contact@surfsidemedia.in">contact@surfsidemedia.in</a>
+                                    href="mailto:homeservice@media.com">homeservice@media.com</a>
                             </li>
                             <li>
-                                <i class="fa fa-headphones"></i> <a href="tel:+911234567890">+91-1234567890</a>
+                                <i class="fa fa-headphones"></i> <a href="tel:+911234567890">01303895377</a>
                             </li>
                         </ul>
                         <h3 style="margin-top: 10px">FOLLOW US</h3>
@@ -197,14 +227,14 @@
                         <h3 class="mlist-h">CONTACT US</h3>
                         <ul class="contact_footer mlist">
                             <li class="location">
-                                <i class="fa fa-map-marker"></i> <a href="#"> Faridabad, Haryana, India</a>
+                                <i class="fa fa-map-marker"></i> <a href="#"> Dhaka, Bangladesh</a>
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i> <a
-                                    href="mailto:contact@surfsidemedia.in">contact@surfsidemedia.in</a>
+                                    href="mailto:homeservice@media.com">homeservice@media.com</a>
                             </li>
                             <li>
-                                <i class="fa fa-phone"></i> <a href="tel:+911234567890">+91-1234567890</a>
+                                <i class="fa fa-phone"></i> <a href="tel:+911234567890">01303895377</a>
                             </li>
                         </ul>
                         <ul class="social mlist-h">
@@ -228,7 +258,7 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <p class="text-xs-center crtext">&copy; 2021 SurfsideMedia. All Rights Reserved.</p>
+                            <p class="text-xs-center crtext">&copy; All rights reserved by <a href="https://shakil.isdb-pwad.com">Shakil Miah</a></p>
                         </div>
                     </div>
                 </div>                

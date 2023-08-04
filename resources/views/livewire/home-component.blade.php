@@ -108,7 +108,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="titles">
-                                <h2>SurfsideMedia <span>Choice</span> of Services</h2>
+                                <h2>HomeServiceMedia <span>Choice</span> of Services</h2>
                                 <i class="fa fa-plane"></i>
                                 <hr class="tall">
                             </div>
@@ -118,7 +118,7 @@
                                 style="padding-right: 5px;padding-left: 5px;">
                                 <a class="g-list" href="service-details/ac-dry-servicing.html">
                                     <div class="img-hover">
-                                        <img src="{{asset('images/services/thumbnails/thumbnail.jpg" alt="AC Dry Servicing')}}"
+                                        <img src="{{asset('images/services/thumbnails/thumbnail.jpg')}}" alt="AC Dry Servicing')}}"
                                             class="img-responsive">
                                     </div>
                                     <div class="info-gallery">
@@ -127,7 +127,7 @@
                                         <p>AC Dry Servicing</p>
                                         <div class="content-btn"><a href="service-details/ac-dry-servicing.html"
                                                 class="btn btn-primary">Book Now</a></div>
-                                        <div class="price"><span>&#36;</span><b>From</b>300</div>
+                                        <div class="price"><span>&#2547;</span><b>From</b>300</div>
                                     </div>
                                 </a>
                             </div>
@@ -144,7 +144,7 @@
                                         <p>AC Installation</p>
                                         <div class="content-btn"><a href="service-details/ac-installation.html"
                                                 class="btn btn-primary">Book Now</a></div>
-                                        <div class="price"><span>&#36;</span><b>From</b>320</div>
+                                        <div class="price"><span>&#2547;</span><b>From</b>320</div>
                                     </div>
                                 </a>
                             </div>
@@ -161,7 +161,7 @@
                                         <p>AC Gas Top Up</p>
                                         <div class="content-btn"><a href="service-details/ac-gas-top-up.html"
                                                 class="btn btn-primary">Book Now</a></div>
-                                        <div class="price"><span>&#36;</span><b>From</b>320</div>
+                                        <div class="price"><span>&#2547;</span><b>From</b>320</div>
                                     </div>
                                 </a>
                             </div>
@@ -178,7 +178,7 @@
                                         <p>AC Gas Refill</p>
                                         <div class="content-btn"><a href="service-details/ac-gas-refill.html"
                                                 class="btn btn-primary">Book Now</a></div>
-                                        <div class="price"><span>&#36;</span><b>From</b>510</div>
+                                        <div class="price"><span>&#2547;</span><b>From</b>510</div>
                                     </div>
                                 </a>
                             </div>
@@ -304,7 +304,7 @@
                                 <p>AC Wet Servicing</p>
                                 <div class="content-btn"><a href="service-details/ac-wet-servicing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>200</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>200</div>
                             </div>
                         </a>
                     </div>
@@ -320,7 +320,7 @@
                                 <p>Bedroom Deep Cleaning</p>
                                 <div class="content-btn"><a href="service-details/bedroom-deep-cleaning.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>300</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>300</div>
                             </div>
                         </a>
                     </div>
@@ -336,7 +336,7 @@
                                 <p>Dining Chair Shampooing</p>
                                 <div class="content-btn"><a href="service-details/dining-chair-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>400</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>400</div>
                             </div>
                         </a>
                     </div>
@@ -352,7 +352,7 @@
                                 <p>Carpet Shampooing</p>
                                 <div class="content-btn"><a href="service-details/carpet-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>200</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>200</div>
                             </div>
                         </a>
                     </div>
@@ -368,7 +368,7 @@
                                 <p>Fabric Sofa Shampooing</p>
                                 <div class="content-btn"><a href="service-details/fabric-sofa-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>211</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>211</div>
                             </div>
                         </a>
                     </div>
@@ -384,7 +384,7 @@
                                 <p>Bathroom Deep Cleaning</p>
                                 <div class="content-btn"><a href="service-details/bathroom-deep-cleaning.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>233</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>233</div>
                             </div>
                         </a>
                     </div>
@@ -400,7 +400,7 @@
                                 <p>Floor Scrubbing &amp; Polishing</p>
                                 <div class="content-btn"><a href="service-details/floor-scrubbing-polishing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>411</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>411</div>
                             </div>
                         </a>
                     </div>
@@ -416,7 +416,7 @@
                                 <p>Mattress Shampooing</p>
                                 <div class="content-btn"><a href="service-details/mattress-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>222</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>222</div>
                             </div>
                         </a>
                     </div>
@@ -432,7 +432,7 @@
                                 <p>Kitchen Deep Cleaning</p>
                                 <div class="content-btn"><a href="service-details/kitchen-deep-cleaning.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>111</div>
+                                <div class="price"><span>&#2547;</span><b>From</b>111</div>
                             </div>
                         </a>
                     </div>
