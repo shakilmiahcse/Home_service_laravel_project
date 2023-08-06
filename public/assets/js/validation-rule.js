@@ -169,8 +169,8 @@ $(function(){
 			phone:{
 				required:true,
 				number: true,
-				minlength:10, 
-				maxlength:10
+				minlength:11, 
+				maxlength:11
 			},
 			password:{
 				required:true,
@@ -183,8 +183,8 @@ $(function(){
 		messages:{
 			phone:{
 				number:"Please enter valid phone number",
-				minlength:"Please enter valid phone number",
-				maxlength:"Please enter valid phone number"								
+				minlength:"Phone number must be 11 digits",
+				maxlength:"Phone number must be 11 digits"								
 			}
 		}		
 
@@ -206,8 +206,8 @@ $(function(){
 			phone:{
 				required:true,
 				number: true,
-				minlength:10, 
-				maxlength:10
+				minlength:11, 
+				maxlength:11
 			},
 			password:{
 				required:true,
@@ -220,8 +220,8 @@ $(function(){
 		messages:{
 			phone:{
 				number:"Please enter valid phone number",
-				minlength:"Please enter valid phone number",
-				maxlength:"Please enter valid phone number"								
+				minlength:"Phone number must be 11 digits",
+				maxlength:"Phone number must be 11 digits"								
 			}
 		}		
 
@@ -286,8 +286,8 @@ $(function(){
 			phone:{
 				required:true,
 				number: true,
-				minlength:10, 
-				maxlength:10
+				minlength:11, 
+				maxlength:11
 			},
 			location:{
 				required:true,
@@ -300,8 +300,8 @@ $(function(){
 		messages:{
 			phone:{
 				number:"Please enter valid phone number",
-				minlength:"Please enter valid phone number",
-				maxlength:"Please enter valid phone number"							
+				minlength:"Phone number must be 11 digits",
+				maxlength:"Phone number must be 11 digits"							
 			}
 		}		
 
