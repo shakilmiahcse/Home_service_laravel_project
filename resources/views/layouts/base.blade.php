@@ -54,7 +54,7 @@
 
                 <ul class="collapse">
                     <li class="title">
-                        <a href="index.php.html"><img style="max-width: 120px" src="{{asset('images/logo.png')}}"></a>
+                        <a href="/"><img style="max-width: 120px" src="{{asset('images/logo.png')}}"></a>
                     </li>
                     <li> <a href="javascript:void(0);">Air Conditioners</a>
                         <ul class="drop-down one-column hover-fade">
