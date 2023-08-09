@@ -29,6 +29,7 @@
                     <div class="row portfolioContainer">
                         <div class="col-md-12 profile1">
                             
+<<<<<<< HEAD
     <table class="table table-striped">
         <thead>
             <tr>
@@ -51,6 +52,30 @@
     </table>
     {{$scategories->links()}}
 </div>
+=======
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Slug</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($scategories as $scategory)
+                                        <tr>
+                                            <td>{{ $scategory->id }}</td>
+                                            <td><img src="{{ asset('images/categories') }}/{{ $scategory->image }}" width="60"/></td>
+                                            <td>{{ $scategory->name }}</td>
+                                            <td>{{ $scategory->slug }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            {{$scategories->links()}}
+                        </div>
+>>>>>>> 857fea692596c3f83eb087c6cfae5ba6048f78f5
 </div>
                         </div>
                     </div>
