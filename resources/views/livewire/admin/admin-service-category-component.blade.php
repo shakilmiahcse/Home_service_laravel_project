@@ -49,6 +49,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{$scategories->links()}}
                         </div>
 </div>
                         </div>
