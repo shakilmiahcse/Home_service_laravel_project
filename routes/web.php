@@ -39,26 +39,18 @@ Route::middleware(['auth:sanctum','verified','authsprovider'])->group(function()
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/service-categories',AdminServiceCategoryComponent::class)->name('admin.service_categories');
+    Route::get('/admin/service-category/add',AdminServiceCategoryComponent::class)->name('admin.add_service_category');
+    
 
 });
 
 
 
+ 
 
 
 
 
 
-
-// //for admin
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
 
 
