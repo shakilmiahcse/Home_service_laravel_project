@@ -40,6 +40,9 @@
                                     </div>
                                 </div>
                            <div class="panel-body">
+                            @if(Session::has('massage'))
+                            <div class="alert alert-success" role="alert">{{Session::get('massage')}}</div>
+                            @endif
                             <table class="table table-striped">
                                 <thead>
                                      <tr>
@@ -57,7 +60,10 @@
                                         <td><img src="{{ asset('images/categories') }}/{{ $scategory->image }}" width="60"/></td>
                                         <td>{{ $scategory->name }}</td>
                                         <td>{{ $scategory->slug }}</td>
-                                        <td><a href="{{route('admin.edit_service_category',['category_id'=>$scategory->id])}}"><i class="fa fa-edit fa-Zx text-info"></i> </a></td>
+                                        <td>
+                                            <a href="{{route('admin.edit_service_category',['category_id'=>$scategory->id])}}"><i class="fa fa-edit fa-Zx text-info"></i> </a>
+                                            <a href="#" onclick="confirm('Are you sure, you want to delete this category!') || event.stopImmediatePropagation()" wire:click.prevent="deleteServicecategory({{$scategory->id}})" style="margin-left: 10px"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        </td>
                                       </tr>
                                @endforeach
                               </tbody> 
