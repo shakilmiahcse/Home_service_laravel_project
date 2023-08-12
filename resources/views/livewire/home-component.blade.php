@@ -192,7 +192,7 @@
                         <div class="row">
                             <div class="col-md-4 ">
                                 <div class="services-lines-info">
-                                    <h2>WELCOME TO DIVERSIFIED</h2>
+                                    <h2>WELCOME TO <a href="/">homeservice.com</a></h2>
                                     <p class="lead">
                                         Book best services at one place.
                                         <span class="line"></span>
