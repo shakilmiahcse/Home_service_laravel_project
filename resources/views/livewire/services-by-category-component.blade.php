@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="content_info" style="margin-top: -70px;">
-            <div>
+            <div>a  
                 <div class="container">
                     <div class="portfolioContainer">
                         @if($scategory->services->count() > 0)
