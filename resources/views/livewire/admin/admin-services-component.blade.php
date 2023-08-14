@@ -35,7 +35,7 @@
                                             All Service
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="#" class="btn btn-info pull-right">Add New</a>
+                                            <a href="{{route('admin.all_services')}}" class="btn btn-info pull-right">Add New</a>
                                         </div>
                                     </div>
                                 </div>

@@ -4,11 +4,14 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use Carbon\Carbon;
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Livewire\WithFileUploads;
 
 class AdminAddServiceComponent extends Component
-{   
+{
+    use WithFileUploads;   
     public $name;
     public $slug;
     public $tegline;
@@ -61,14 +64,26 @@ class AdminAddServiceComponent extends Component
         $service = new Service();
         $service->name = $this->name;
         $service->slug = $this->slug;
-        $service->name = $this->name;
-        $service->name = $this->name;
-        $service->name = $this->name;
-        $service->name = $this->name;
-        $service->name = $this->name;
-        $service->name = $this->name;
-        $service->name = $this->name;
+        $service->tagline = $this->tagline;
+        $service->service_category_id = $this->service_category_id;
+        $service->price = $this->price;
+        $service->discount = $this->discount;
+        $service->discount_type = $this->discount_type;
+        $service->idescription = $this->idescription;
+        $service->description = $this->name;
+        $service->inclusion = str_replace("\n",'|',trim($this->inclusion));
+        $service->exclusion =str_replace("\n",'|',trim($this->exclusion));
+
+        $imageName = Carbon::now()->timestamp . '.' . $this->thumbnail->extension();
+        $this->thumbnail->storeAs('services/thumbnails', $imageName);
+        $service->thumbnail = $imageName;
+
+        $imageName2 = Carbon::now()->timestamp . '.' . $this->image->extension();
+        $this->image->storeAs('services', $imageName2);
+        $service->image = $imageName2;
         
+        $service->save();
+        session()->flash('message','Service has been created successfully!');
     }
 
     public function render()
