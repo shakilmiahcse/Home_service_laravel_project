@@ -73,7 +73,7 @@
                                         <td>{{$service->category->name}}</td>
                                         <td>{{$service->created_at}}</td>
                                         <td>
-                                            <a href="#"><i class="fa fa-edit fa-Zx text-info"></i> </a>
+                                            <a href="{{route('admin.edit_service',['service_slug'=>$service->slug])}}"><i class="fa fa-edit fa-Zx text-info"></i> </a>
                                             <a href="#" style="margin-left: 10px"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                         </td>
                                       </tr>
