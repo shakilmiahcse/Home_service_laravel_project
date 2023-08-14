@@ -11,7 +11,7 @@
         <div class="bg_parallax image_02_parallax"></div>
         <div class="opacy_bg_02">
             <div class="container">
-                <h1>All Services</h1>
+                <h1>All Services joy</h1>
                 <div class="crumbs">
                     <ul>
                         <li><a href="/">Home</a></li>
@@ -35,7 +35,7 @@
                                             All Service
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="{{route('admin.all_services')}}" class="btn btn-info pull-right">Add New</a>
+                                            <a href="{{route('admin.add_service')}}" class="btn btn-info pull-right">Add New</a>
                                         </div>
                                     </div>
                                 </div>
