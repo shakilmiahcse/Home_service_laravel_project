@@ -14,7 +14,7 @@ class AdminAddServiceComponent extends Component
     use WithFileUploads;   
     public $name;
     public $slug;
-    public $tegline;
+    public $tagline;
     public $service_category_id;
     public $price;
     public $discount;
@@ -35,7 +35,7 @@ class AdminAddServiceComponent extends Component
         $this->validateOnly($fields,[
             'name' => 'required',
             'slug' => 'required',
-            'tegline' => 'required',
+            'tagline' => 'required',
             'service_category_id' => 'required',
             'price' => 'required',
             'image' => 'required|mimes:jpeg,png',
@@ -51,7 +51,7 @@ class AdminAddServiceComponent extends Component
         $this->validate([
             'name' => 'required',
             'slug' => 'required',
-            'tegline' => 'required',
+            'tagline' => 'required',
             'service_category_id' => 'required',
             'price' => 'required',
             'image' => 'required|mimes:jpeg,png',

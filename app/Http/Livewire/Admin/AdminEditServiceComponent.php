@@ -14,7 +14,7 @@ class AdminEditServiceComponent extends Component
     use WithFileUploads;   
     public $name;
     public $slug;
-    public $tegline;
+    public $tagline;
     public $service_category_id;
     public $price;
     public $discount;
@@ -35,7 +35,7 @@ class AdminEditServiceComponent extends Component
         $this->service_id = $service->id;
         $this->name = $service->name;
         $this->slug = $service->slug; 
-        $this->tegline = $service->tagline;
+        $this->tagline = $service->tagline;
         $this->service_category_id = $service->service_category_id;
         $this->price = $service->price;
         $this->discount = $service->discount;
@@ -57,7 +57,7 @@ class AdminEditServiceComponent extends Component
         $this->validateOnly($fields,[
             'name' => 'required',
             'slug' => 'required',
-            'tegline' => 'required',
+            'tagline' => 'required',
             'service_category_id' => 'required',
             'price' => 'required',
             
@@ -85,10 +85,9 @@ class AdminEditServiceComponent extends Component
         $this->validate([
             'name' => 'required',
             'slug' => 'required',
-            'tegline' => 'required',
+            'tagline' => 'required',
             'service_category_id' => 'required',
             'price' => 'required',
-           
             'description' => 'required',
             'inclusion' => 'required',
             'exclusion' => 'required'
@@ -111,7 +110,7 @@ class AdminEditServiceComponent extends Component
         $service = Service::find($this->service_id);
         $service->name = $this->name;
         $service->slug = $this->slug;
-        $service->tagline = $this->tegline;
+        $service->tagline = $this->tagline;
         $service->service_category_id = $this->service_category_id;
         $service->price = $this->price;
         $service->discount = $this->discount;
