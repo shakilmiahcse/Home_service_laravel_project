@@ -50,6 +50,7 @@
                                        <th>Image</th>
                                        <th>Name</th>
                                        <th>Slug</th>
+                                       <th>Featured</th>
                                        <th>Action</th>
                                      </tr>
                                 </thead>
@@ -60,6 +61,13 @@
                                         <td><img src="{{ asset('images/categories') }}/{{ $scategory->image }}" height="60"/></td>
                                         <td>{{ $scategory->name }}</td>
                                         <td>{{ $scategory->slug }}</td>
+                                        <th>
+                                            @if($scategory->featured)
+                                                Yes
+                                            @else
+                                                No 
+                                            @endif
+                                        </th>
                                         <td>
                                             <a href="{{route('admin.services_by_category',['category_slug'=>$scategory->slug])}}" style="margin-right: 10px"><i class="fa fa-list fa-Zx text-info"></i> </a>
                                             <a href="{{route('admin.edit_service_category',['category_id'=>$scategory->id])}}"><i class="fa fa-edit fa-Zx text-info"></i> </a>
