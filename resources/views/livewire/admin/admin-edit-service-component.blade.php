@@ -89,7 +89,7 @@
                                         <div class="form-group">
                                             <label for="discount_type" class="control-label col-sm-3">discount Type: </label>
                                             <div class="col-sm-9">
-                                                <select class="form-control" name="" id="" wire:model="discount_type">
+                                                <select class="form-control" name="" id="discount_type" wire:model="discount_type">
                                                     <option value="">Select Service Category</option>
                                                     <option value="fixed">Fixed</option>
                                                     <option value="percent">Percent</option>
@@ -97,10 +97,21 @@
                                                 @error('discount_type') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label for="featured" class="control-label col-sm-3">Featured: </label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" name="" id="featured" wire:model="featured">
+                                                    <option value="0">No</option>
+                                                    <option value="1">Yes</option>
+                                                </select>                                            
+                                            </div>
+                                        </div>
+
                                         <div class="form-group">
                                             <label for="description" class="control-label col-sm-3">Description: </label>
                                             <div class="col-sm-9">
-                                                <textarea class="form-control" name="" id=""  wire:model="description"></textarea>
+                                                <textarea class="form-control" name="" id="description"  wire:model="description"></textarea>
                                                 @error('description') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>

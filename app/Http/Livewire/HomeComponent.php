@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Service;
+use App\Models\ServiceCategory;
 use Livewire\Component;
 
 class HomeComponent extends Component
 {
     public function render()
     {
-        return view('livewire.home-component')->layout('layouts.base');
+        $scategories = ServiceCategory::inRandomOrder()->take(18)->get();
+        $fservices = Service::where('featured', 1)->inRandomOrder()->take(8)->get();
+        return view('livewire.home-component',['scategories'=>$scategories,'fservices'=>$fservices])->layout('layouts.base');
     }
 }
