@@ -32,9 +32,9 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    @if(Session::has('massage'))
+                                    @if(Session::has('message'))
                                     <div class="alert alert-success" role="alert">
-                                        {{Session::get('massage')}}
+                                        {{Session::get('message')}}
                                     </div>
                                     @endif
                                     <form class="form-horizontal" wire:submit.prevent="updateService">
@@ -54,10 +54,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="tegline" class="control-label col-sm-3">tagline: </label>
+                                            <label for="tagline" class="control-label col-sm-3">tagline: </label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" name="tegline" wire:model="tegline" />
-                                                @error('tegline') <p class="text-danger">{{$message}}</p> @enderror
+                                                <input type="text" class="form-control" name="tagline" wire:model="tagline" />
+                                                @error('tagline') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -69,7 +69,7 @@
                                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                                     @endforeach
                                                 </select>
-                                                @error('service_category_id') <p class="text-danger">{{$massage}}</p> @enderror
+                                                @error('service_category_id') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -83,7 +83,7 @@
                                             <label for="Discount" class="control-label col-sm-3">Discount: </label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="Discount" wire:model="discount" />
-                                                @error('discount') <p class="text-danger">{{$massage}}</p> @enderror
+                                                @error('discount') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -94,7 +94,7 @@
                                                     <option value="fixed">Fixed</option>
                                                     <option value="percent">Percent</option>
                                                 </select>
-                                                @error('discount_type') <p class="text-danger">{{$massage}}</p> @enderror
+                                                @error('discount_type') <p class="text-danger">{{$message}}</p> @enderror
                                             </div>
                                         </div>
 
@@ -133,7 +133,7 @@
                                             <label for="thumbnail" class="control-label col-sm-3">Thumbnail: </label>
                                             <div class="col-sm-9">
                                                 <input type="file" class="form-control-file" name="thumbnail" wire:model="newthumbnail">
-                                                @error('$newthumbnail') <p class="text-danger">{{$massage}}</p> @enderror
+                                                @error('$newthumbnail') <p class="text-danger">{{$message}}</p> @enderror
                                                 @if($newthumbnail)
                                                     <img src="{{$newthumbnail->temporaryUrl()}}" width="60">
                                                 @else
@@ -145,7 +145,7 @@
                                             <label for="image" class="control-label col-sm-3">Image: </label>
                                             <div class="col-sm-9">
                                                 <input type="file" class="form-control-file" name="image" wire:model="newimage">
-                                                @error('$newimage') <p class="text-danger">{{$massage}}</p> @enderror
+                                                @error('$newimage') <p class="text-danger">{{$message}}</p> @enderror
                                                 @if($newimage)
                                                     <img src="{{$newimage->temporaryUrl()}}" width="60">
                                                 @else

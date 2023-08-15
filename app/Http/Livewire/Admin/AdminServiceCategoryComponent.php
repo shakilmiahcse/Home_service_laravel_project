@@ -18,7 +18,7 @@ class AdminServiceCategoryComponent extends Component
             unlink('images/categories'.'/'.$scategory->image);
         }
         $scategory->delete();
-        session()->flash('massage','Service Category has been deleted succesfully');
+        session()->flash('message','Service Category has been deleted succesfully');
     }
     public function render()
     {   

@@ -40,8 +40,8 @@
                                     </div>
                                 </div>
                            <div class="panel-body">
-                            @if(Session::has('massage'))
-                            <div class="alert alert-success" role="alert">{{Session::get('massage')}}</div>
+                            @if(Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
                             @endif
                             <table class="table table-striped">
                                 <thead>
