@@ -305,7 +305,9 @@
                 navigationStyle: "preview1"
             });
         });
+        
     </script>
+    @stack('scripts')
     @livewireScripts
 </body>
 </html>
