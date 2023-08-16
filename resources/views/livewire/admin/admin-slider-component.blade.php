@@ -71,7 +71,7 @@
                                         <td>{{$slide->created_at}}</td>
                                         <td>
                                             <a href="{{route('admin.edit_slide',['slide_id'=>$slide->id])}}"><i class="fa fa-edit fa-Zx text-info"></i> </a>
-                                            <a href="#" onclick="confirm('Are you sure, you want to delete this slide?') || event.stopImmediatePropagation()" wire:click.prevent="deleteslide({{$slide->id}})" style="margin-left: 10px"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            <a href="#" onclick="confirm('Are you sure, you want to delete this slide?') || event.stopImmediatePropagation()" wire:click.prevent="deleteSlide({{$slide->id}})" style="margin-left: 10px"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                         </td>
                                       </tr>
                                @endforeach
