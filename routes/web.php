@@ -10,6 +10,7 @@ use App\Http\Livewire\Admin\AdminContactComponenet;
 use App\Http\Livewire\Admin\AdminEditServiceCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditServiceComponent;
 use App\Http\Livewire\Admin\AdminEditSlideComponent;
+use App\Http\Livewire\Admin\AdminServiceProvidersComponent;
 use App\Http\Livewire\Admin\AdminServicesComponent;
 use App\Http\Livewire\Admin\AdminServicesByCategoryComponent;
 use App\Http\Livewire\Admin\AdminSliderComponent;
@@ -78,6 +79,8 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/slide/add',AdminAddSlideComponent::class)->name('admin.add_slide');
     Route::get('/admin/slide/edit/{slide_id}',AdminEditSlideComponent::class)->name('admin.edit_slide');
     Route::get('/admin/contacts',AdminContactComponenet::class)->name('admin.contacts');
+
+    Route::get('/admin/service-providers',AdminServiceProvidersComponent::class)->name('admin.service_providers');
 });
 
 
