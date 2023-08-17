@@ -43,7 +43,7 @@
                                                     <div class="col-md-9">
                                                         <input type="file" class="form-control-file" name="newimage" wire:model="newimage">
                                                     @if($newimage)
-                                                        <img src="{{$newimages->temporaryUrl()}}" width="220"/>
+                                                        <img src="{{$newimage->temporaryUrl()}}" width="220"/>
                                                     @elseif($image)
                                                         <img src="{{asset('images/sproviders')}}/{{$image}}" width="220"/>
                                                     @else
