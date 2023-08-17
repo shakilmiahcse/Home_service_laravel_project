@@ -47,7 +47,7 @@
                                                     @elseif($image)
                                                         <img src="{{asset('images/sproviders')}}/{{$image}}" width="220"/>
                                                     @else
-                                                         <img src="{{asset('images/sproviders/default.jpg')}}" width="220"/>
+                                                         <img src="{{asset('images/sproviders/avatar-profile.jpg')}}" width="220"/>
                                                     @endif
                                                     </div>
                                                 </div>
