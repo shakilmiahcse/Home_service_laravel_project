@@ -8,7 +8,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li>/</li>
-                        <li>Change Location</li>
+                        <li>Service Booking</li>
                     </ul>
                 </div>
             </div>

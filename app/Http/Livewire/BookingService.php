@@ -31,15 +31,13 @@ class BookingService extends Component
     ];
 
 
-    public $service_slug;
-    public $service;
+    public $slug;
 
-    public function mount($service_slug)
-    {
-        $this->service_slug = $service_slug;
-        $this->service = Service::where('service_slug', $this->service_slug)->first();
-    }
-
+    public function mount()
+{
+    $this->slug = request()->query('slug');
+}
+    
     public function render()
     {
         // $service = Service::where('slug',$this->service_slug)->first(); ,['service'=>$service]
@@ -48,7 +46,11 @@ class BookingService extends Component
 
     public function bookService()
     {
+        // Find the service by slug
+         $service = Service::where('slug', $this->slug)->first();
+
         $this->validate();
+        
 
         // Create a booking record here using the validated data
         $booking = Booking::create([

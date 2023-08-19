@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="panel-footer">
                                         <form>                                                
-                                            <div class="content-btn"><a href="{{route('booking.form',['service_slug'=>$service->slug])}}"
+                                            <div class="content-btn"><a href="{{route('booking.form',['slug'=>$service->slug])}}"
                                                 class="btn btn-primary">Book Now</a></div>
                                         </form>
                                     </div>
