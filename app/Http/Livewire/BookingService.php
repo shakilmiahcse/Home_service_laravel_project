@@ -32,6 +32,13 @@ class BookingService extends Component
 
 
     public $service_slug;
+    public $service;
+
+    public function mount($service_slug)
+    {
+        $this->service_slug = $service_slug;
+        $this->service = Service::where('service_slug', $this->service_slug)->first();
+    }
 
     public function render()
     {
@@ -46,7 +53,7 @@ class BookingService extends Component
         // Create a booking record here using the validated data
         $booking = Booking::create([
             'user_id' => auth()->user()->id,
-            'service_id' => $this->service_id,
+            'service_id' => $this->service->id,
             'address' => $this->address,
             'street_number' => $this->street_number,
             'route' => $this->route,
