@@ -15,4 +15,9 @@ class Service extends Model
     {
         return $this->belongsTo(ServiceCategory::class, "service_category_id");
     }
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class, 'service_id');
+    }
 }
