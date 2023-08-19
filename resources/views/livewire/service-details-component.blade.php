@@ -108,8 +108,8 @@
                                     </div>
                                     <div class="panel-footer">
                                         <form>                                                
-                                            <input type="submit" class="btn btn-primary" name="submit"
-                                                value=" Book Now">
+                                            <div class="content-btn"><a href="{{route('booking.form')}}"
+                                                class="btn btn-primary">Book Now</a></div>
                                         </form>
                                     </div>
                                 </div>

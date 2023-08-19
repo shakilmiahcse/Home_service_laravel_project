@@ -27,17 +27,16 @@
                             <aside>
                                 <h4>The Office</h4>
                                 <address>
-                                    <strong>SurfsideMedia Home Services.</strong><br>
-                                    <i class="fa fa-map-marker"></i><strong>Address: </strong>Faridabad, Haryana,
-                                    India<br>
-                                    <i class="fa fa-phone"></i><strong>Phone: </strong> +91-1234567890
+                                    <strong>Home Services.</strong><br>
+                                    <i class="fa fa-map-marker"></i><strong>Address: </strong>Dhaka, bangladesh<br>
+                                    <i class="fa fa-phone"></i><strong>Phone: </strong> 01303895377
                                 </address>
                                 <address>
-                                    <strong>SurfsideMedia Emails</strong><br>
+                                    <strong>Home service Media Emails</strong><br>
                                     <i class="fa fa-envelope"></i><strong>Email:</strong><a
-                                        href="mailto:contact@surfsidemedia.in"> contact@surfsidemedia.in</a><br>
+                                        href="mailto:contact@surfsidemedia.in"> shakil@gmail.com</a><br>
                                     <i class="fa fa-envelope"></i><strong>Email:</strong><a
-                                        href="mailto:support@surfsidemedia.in"> support@surfsidemedia.in</a>
+                                        href="mailto:support@surfsidemedia.in"> turjo@gmail.com</a>
                                 </address>
                             </aside>
                             <hr class="tall">

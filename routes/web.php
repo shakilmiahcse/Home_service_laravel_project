@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\AdminServiceProvidersComponent;
 use App\Http\Livewire\Admin\AdminServicesComponent;
 use App\Http\Livewire\Admin\AdminServicesByCategoryComponent;
 use App\Http\Livewire\Admin\AdminSliderComponent;
+use App\Http\Livewire\BookingService;
 use App\Http\Livewire\ChangeLocationComponenet;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\Customer\CustomerDashboardComponent;
@@ -56,6 +57,10 @@ Route::get('/contact-us',ContactComponent::class)->name('home.contact');
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/customer/dashboard',CustomerDashboardComponent::class)->name('customer.dashboard');
 });
+
+// Booking Form
+Route::get('/service/details/booking', BookingService::class)->name('booking.form')->middleware('auth');
+Route::post('/service/booking', BookingService::class)->middleware('auth');
 
 //for service provider
 Route::middleware(['auth:sanctum','verified','authsprovider'])->group(function(){
