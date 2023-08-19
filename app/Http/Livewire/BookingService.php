@@ -60,6 +60,6 @@ class BookingService extends Component
         // Optionally, you can add more logic here (e.g., send confirmation emails)
 
         // Redirect to a success page or show a success message
-        session()->flash('success', 'Booking successful!');
+        session()->flash('message', 'Booking successful!');
     }
 }
