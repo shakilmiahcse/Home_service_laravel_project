@@ -56,14 +56,14 @@ class BookingService extends Component
         $booking = Booking::create([
             'user_id' => auth()->user()->id,
             'service_id' => $service->id,
-            'address' => 'A fake address',
+            'address' => $this->address,
             'street_number' => $this->street_number,
             'route' => $this->route,
             'city' => $this->city,
             'state' => $this->state,
             'country' => $this->country,
             'zipcode' => $this->zipcode,
-            'payment_type' => 'cash',
+            'payment_type' => $this->payment_type,
         ]);
         // old code by sakil 
         // $booking = Booking::create([
@@ -82,6 +82,6 @@ class BookingService extends Component
         // Optionally, you can add more logic here (e.g., send confirmation emails)
         // dd($this->payment_type);
         // Redirect to a success page or show a success message
-        session()->flash('message', 'Booking successful!');
+        session()->flash('message', 'Booking successfully!');
     }
 }

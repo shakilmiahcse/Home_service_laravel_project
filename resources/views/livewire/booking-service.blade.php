@@ -72,6 +72,21 @@
                                             <input wire:model="zipcode" type="text" class="form-control">
                                             @error('zipcode') <span class="text-danger">{{ $message }}</span> @enderror
                                         </div>
+                                        <!-- Add the new address-related fields here -->
+                                        <div class="form-group">
+                                            <label for="address">Address</label>
+                                             <input wire:model="address" type="text" class="form-control">
+                                             @error('address') <span class="text-danger">{{ $message }}</span> @enderror
+                                         </div>
+
+                                        <div class="form-group">
+                                            <label for="payment_type">Payment Type</label>
+                                            <select wire:model="payment_type" class="form-control">
+                                                <option value="cash">Cash</option>
+                                                <option value="card">Card</option>
+                                            </select>
+                                            @error('payment_type') <span class="text-danger">{{ $message }}</span> @enderror
+                                        </div>
                                 
                                         <!-- ... Rest of the form ... -->
                                         <div class="content-btn">
