@@ -47,27 +47,40 @@ class BookingService extends Component
     public function bookService()
     {
         // Find the service by slug
-         $service = Service::where('slug', $this->slug)->first();
-
-        $this->validate();
+        $service = Service::where('slug', $this->slug)->first();
+       
+        // $this->validate();
         
 
         // Create a booking record here using the validated data
         $booking = Booking::create([
             'user_id' => auth()->user()->id,
-            'service_id' => $this->service->id,
-            'address' => $this->address,
+            'service_id' => $service->id,
+            'address' => 'A fake address',
             'street_number' => $this->street_number,
             'route' => $this->route,
             'city' => $this->city,
             'state' => $this->state,
             'country' => $this->country,
             'zipcode' => $this->zipcode,
-            'payment_type' => $this->payment_type,
+            'payment_type' => 'cash',
         ]);
+        // old code by sakil 
+        // $booking = Booking::create([
+        //     'user_id' => auth()->user()->id,
+        //     'service_id' => $this->service->id,
+        //     'address' => $this->address,
+        //     'street_number' => $this->street_number,
+        //     'route' => $this->route,
+        //     'city' => $this->city,
+        //     'state' => $this->state,
+        //     'country' => $this->country,
+        //     'zipcode' => $this->zipcode,
+        //     'payment_type' => $this->payment_type,
+        // ]);
 
         // Optionally, you can add more logic here (e.g., send confirmation emails)
-
+        // dd($this->payment_type);
         // Redirect to a success page or show a success message
         session()->flash('message', 'Booking successful!');
     }
