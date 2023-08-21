@@ -127,6 +127,7 @@
                                     <li><a href="{{route('admin.contacts')}}">All Contacts</a></li>
                                     <li><a href="{{route('booking.form')}}">Book Now</a></li>
                                     <li><a href="{{route('admin.service_providers')}}">All Service Providers</a></li>
+                                    <li><a href="{{route('admin.customers')}}">All Customer</a></li>
                                     <li><a href="{{route('admin.booking_service')}}">All Bookings</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>

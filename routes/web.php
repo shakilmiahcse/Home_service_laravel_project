@@ -8,6 +8,7 @@ use App\Http\Livewire\Admin\AdminAddServiceComponent;
 use App\Http\Livewire\Admin\AdminAddSlideComponent;
 use App\Http\Livewire\Admin\AdminBookingComponenet;
 use App\Http\Livewire\Admin\AdminContactComponenet;
+use App\Http\Livewire\Admin\AdminCustomerComponenet;
 use App\Http\Livewire\Admin\AdminEditServiceCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditServiceComponent;
 use App\Http\Livewire\Admin\AdminEditSlideComponent;
@@ -90,6 +91,7 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
 
     Route::get('/admin/service-providers',AdminServiceProvidersComponent::class)->name('admin.service_providers');
     Route::get('/admin/booking-service',AdminBookingComponenet::class)->name('admin.booking_service');
+    Route::get('/admin/customers',AdminCustomerComponenet::class)->name('admin.customers');
 });
 
 
