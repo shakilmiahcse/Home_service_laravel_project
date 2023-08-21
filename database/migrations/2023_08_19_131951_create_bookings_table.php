@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('state');
             $table->string('country');
             $table->string('zipcode');
-            $table->enum('payment_type', ['cash', 'card']);
+            $table->enum('payment_type', ['cash', 'card'])->default('cash');
             $table->timestamps();
     
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

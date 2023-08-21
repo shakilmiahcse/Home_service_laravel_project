@@ -127,6 +127,7 @@
                                     <li><a href="{{route('admin.contacts')}}">All Contacts</a></li>
                                     <li><a href="{{route('booking.form')}}">Book Now</a></li>
                                     <li><a href="{{route('admin.service_providers')}}">All Service Providers</a></li>
+                                    <li><a href="{{route('admin.booking_service')}}">All Bookings</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
@@ -142,6 +143,7 @@
                             <li class="login-form"> <a href="#" title="Register">My Account (Customer)</a>
                                 <ul class="drop-down one-column hover-fade">
                                     <li><a href="{{route('customer.dashboard')}}">Dashboard</a></li>
+                                    <li><a href="{{route('customer.booking')}}">Booked</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
