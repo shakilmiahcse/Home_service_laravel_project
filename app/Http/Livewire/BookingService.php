@@ -9,24 +9,24 @@ use Livewire\Component;
 class BookingService extends Component
 {
     public $service_id;
-    public $address;
     public $street_number;
     public $route;
     public $city;
     public $state;
     public $country;
     public $zipcode;
-    public $payment_type;
+    public $address;
+    public $payment_type = 'cash';
 
     protected $rules = [
         'service_id' => 'required|exists:services,id',
-        'address' => 'required|string',
         'street_number' => 'required|string',
         'route' => 'required|string',
         'city' => 'required|string',
         'state' => 'required|string',
         'country' => 'required|string',
         'zipcode' => 'required|string',
+        'address' => 'required|string',
         'payment_type' => 'required|in:cash,card',
     ];
 
@@ -37,6 +37,7 @@ class BookingService extends Component
 {
     $this->slug = request()->query('slug');
 }
+
     
     public function render()
     {
@@ -49,7 +50,7 @@ class BookingService extends Component
         // Find the service by slug
         $service = Service::where('slug', $this->slug)->first();
        
-        // $this->validate();
+        $this->validate();
         
 
         // Create a booking record here using the validated data
