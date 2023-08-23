@@ -50,10 +50,10 @@ class BookingService extends Component
         $service = Service::where('slug', $this->slug)->first();
        
         // $this->validate();
-        
 
-        // Create a booking record here using the validated data
-        $booking = Booking::create([
+        if ($this->payment_type === 'cash') {
+             // Create a booking record here using the validated data
+            $booking = Booking::create([
             'user_id' => auth()->user()->id,
             'service_id' => $service->id,
             'address' => $this->address,
@@ -65,8 +65,6 @@ class BookingService extends Component
             'zipcode' => $this->zipcode,
             'payment_type' => $this->payment_type,
         ]);
-
-        if ($this->payment_type === 'cash') {
             // Process the booking for cash payment
             // Save to database, etc.
             session()->flash('message', 'Booking successfully!');
