@@ -21,6 +21,7 @@ use App\Http\Livewire\ChangeLocationComponenet;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\Customer\CustomerBookingComponenet;
 use App\Http\Livewire\Customer\CustomerDashboardComponent;
+use App\Http\Livewire\Customer\CustomerPaymentComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ServiceCategoriesComponent;
 use App\Http\Livewire\ServiceDetailsComponent;
@@ -59,12 +60,17 @@ Route::get('/contact-us',ContactComponent::class)->name('home.contact');
 //for customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/customer/dashboard',CustomerDashboardComponent::class)->name('customer.dashboard');
-});
-Route::get('/customer/booking',CustomerBookingComponenet::class)->name('customer.booking');
+    Route::get('/customer/booking',CustomerBookingComponenet::class)->name('customer.booking');
 
-// Booking Form
-Route::get('/service/details/booking', BookingService::class)->name('booking.form')->middleware('auth');
-Route::post('/service/booking', BookingService::class)->middleware('auth');
+    // Booking Form
+    Route::get('/service/details/booking', BookingService::class)->name('booking.form');
+    Route::post('/service/booking', BookingService::class);
+    Route::get('/customer/payment',CustomerPaymentComponent::class)->name('customer.payment');
+});
+
+
+
+
 
 //for service provider
 Route::middleware(['auth:sanctum','verified','authsprovider'])->group(function(){

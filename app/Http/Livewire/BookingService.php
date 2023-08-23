@@ -9,24 +9,24 @@ use Livewire\Component;
 class BookingService extends Component
 {
     public $service_id;
+    public $address;
     public $street_number;
     public $route;
     public $city;
     public $state;
     public $country;
     public $zipcode;
-    public $address;
     public $payment_type = 'cash';
 
     protected $rules = [
         'service_id' => 'required|exists:services,id',
+        'address' => 'required|string',
         'street_number' => 'required|string',
         'route' => 'required|string',
         'city' => 'required|string',
         'state' => 'required|string',
         'country' => 'required|string',
         'zipcode' => 'required|string',
-        'address' => 'required|string',
         'payment_type' => 'required|in:cash,card',
     ];
 
@@ -37,7 +37,6 @@ class BookingService extends Component
 {
     $this->slug = request()->query('slug');
 }
-
     
     public function render()
     {
@@ -50,7 +49,7 @@ class BookingService extends Component
         // Find the service by slug
         $service = Service::where('slug', $this->slug)->first();
        
-        $this->validate();
+        // $this->validate();
         
 
         // Create a booking record here using the validated data
@@ -66,23 +65,17 @@ class BookingService extends Component
             'zipcode' => $this->zipcode,
             'payment_type' => $this->payment_type,
         ]);
-        // old code by sakil 
-        // $booking = Booking::create([
-        //     'user_id' => auth()->user()->id,
-        //     'service_id' => $this->service->id,
-        //     'address' => $this->address,
-        //     'street_number' => $this->street_number,
-        //     'route' => $this->route,
-        //     'city' => $this->city,
-        //     'state' => $this->state,
-        //     'country' => $this->country,
-        //     'zipcode' => $this->zipcode,
-        //     'payment_type' => $this->payment_type,
-        // ]);
 
-        // Optionally, you can add more logic here (e.g., send confirmation emails)
-        // dd($this->payment_type);
-        // Redirect to a success page or show a success message
-        session()->flash('message', 'Booking successfully!');
+        if ($this->payment_type === 'cash') {
+            // Process the booking for cash payment
+            // Save to database, etc.
+            session()->flash('message', 'Booking successfully!');
+        } else {
+            // Redirect to the payment page for card payment
+            // You can implement this redirection logic here
+            // For example, return a redirect response
+            return redirect()->route('customer.payment');
+        }
+        
     }
 }
